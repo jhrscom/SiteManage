@@ -14,6 +14,10 @@ A simple website management tool written in C#，使用C#代码创建网站的�
 
 6、英文博客贴子地址：https://znlive.com/how-to-use-csharp-add-website
 
+7、YouTube查看演示视频：https://youtu.be/9Xd7V4J9Lc8
+
+提示：有些地区是不能访问YouTube，需要使用科学上网软件或者VPN，使用多年非常稳的一款：https://gbtcs.com/li7k
+
 -------------------------------------------------------------------------------------------------
 
 1. The current program is developed using vs2019 and .net 5
@@ -22,3 +26,4 @@ A simple website management tool written in C#，使用C#代码创建网站的�
 4. Virtual directories and applications can be nested arbitrarily, all of which can be implemented by C# code.
 5. Chinese blog post address: https://jhrs.com/2021/43667.html
 6. English blog post address: https://znlive.com/how-to-use-csharp-add-website
+7. YouTube: https://youtu.be/9Xd7V4J9Lc8
