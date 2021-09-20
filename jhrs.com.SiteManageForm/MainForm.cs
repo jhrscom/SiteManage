@@ -1,18 +1,18 @@
-﻿using System;
+﻿using CefSharp.WinForms;
+using jhrs.com.SiteMange.Extensions;
+using Microsoft.Web.Administration;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CefSharp.WinForms;
 using System.Windows.Forms;
-using jhrs.com.SiteMange.Extensions;
-using Microsoft.Web.Administration;
-using System.IO;
 
-namespace jhrs.com.SiteMange
+namespace jhrs.com.SiteManageForm
 {
     public partial class MainForm : Form
     {
@@ -309,6 +309,25 @@ namespace jhrs.com.SiteMange
             if (result == DialogResult.OK)
             {
                 textBox11.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var url = "https://github.com/jhrscom/sitemanage";
+            if (blog != null)
+            {
+                (blog.Controls[0] as ChromiumWebBrowser).LoadUrlAsync(url);
+                tabControl1.SelectedTab = blog;
+            }
+            else
+            {
+                blog = new TabPage("My Blog & Source Code");
+                tabControl1.TabPages.Add(blog);
+                var browser = new ChromiumWebBrowser(url);
+                browser.Dock = DockStyle.Fill;
+                tabControl1.SelectedTab = blog;
+                tabControl1.SelectedTab.Controls.Add(browser);
             }
         }
     }
